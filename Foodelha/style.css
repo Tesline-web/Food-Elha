@@ -1,0 +1,333 @@
+:root {
+    --primary-color: #c94c4c;
+    --secondary-color: #f6b93b;
+    --accent-color: #55433b;
+    --background-color: #fff5e6;
+    --text-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+section {
+    padding: 2rem 5%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu {
+    margin-top: 4rem;
+}
+
+h2 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item h3, .menu-item p, .menu-item .price {
+    padding: 0.5rem 1rem;
+}
+
+.menu-item h3 {
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+}
+
+.menu-item .price {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.about {
+    background-color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.contact {
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+footer {
+    background-color: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.order-section {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.order-btn {
+    background: linear-gradient(135deg, var(--primary-color), #e85858);
+    color: white;
+    border: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(201, 76, 76, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 76, 76, 0.4);
+    background: linear-gradient(135deg, #e85858, var(--primary-color));
+}
+
+.order-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(201, 76, 76, 0.3);
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    background-color: white;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary-color), #e85858);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(201, 76, 76, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 76, 76, 0.4);
+    background: linear-gradient(135deg, #e85858, var(--primary-color));
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(201, 76, 76, 0.3);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .popup-content {
+        margin: 2% auto;
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group select,
+    .form-group input,
+    .form-group textarea {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .submit-btn {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}

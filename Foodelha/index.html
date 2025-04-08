@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Elha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Food Elha</div>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">A propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="order-section">
+        <button id="orderBtn" class="order-btn">Commander</button>
+    </div>
+
+    <div id="orderPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Votre Commande</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="menu">Choisissez votre plat:</label>
+                    <select id="menu" name="menu" required>
+                        <option value="">Sélectionnez un plat</option>
+                        <option value="tajine">Tajine aux prunaux - 14.99€</option>
+                        <option value="couscous">Couscous - 19.45€</option>
+                        <option value="harira">Harira - 10.45€</option>
+                        <option value="pastilla">Pastilla - 16.45€</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantité:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Numéro de téléphone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Adresse:</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Commander</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="menu" class="menu">
+        <h2>Notre Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="images/tajine.jpg" alt="Tajine">
+                <h3>Tajine aux prunaux</h3>
+                <p>Un des plat les plus connus au Maroc, qui peut être aussi fait de viande ou bien de legumes.</p>
+                <span class="price">14.99€</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/couscous.jpg" alt="Couscous">
+                <h3>Couscous</h3>
+                <p>Un incontournable de la cuisine marocaine, composée de semoule, de légumes et de viande de boeuf.</p>
+                <span class="price">19.45€</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/harira.jpg" alt="Harira">
+                <h3>Harira</h3>
+                <p>Connue pendant le mois du Ramadan, elle est composée de tomates, de viande, d'oignons et de légumes secs.</p>
+                <span class="price">10.45€</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/pastilla.jpg" alt="Pastilla">
+                <h3>Pastilla</h3>
+                <p> Il s'agit d'un gâteau de pâte feuilleté, fabriqué à l'aide de feuilles de brick et farci d'un hachis de fruit de mer ou de poulet, avant d'être saupoudré de sucre et de cannelle.</p>
+                <span class="price">16.45€</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>A propos</h2>
+        <p>Étant née au Maroc, j'ai appris aux côtés de ma mère, qui m'a transmis les différentes méthodes de cuisine afin de partager les saveurs avec chacun.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Nous contacter</h2>
+        <div class="contact-info">
+            <p>📍 Cannes</p>
+            <p>📞 01 02 03 04 05</p>
+            <p>✉️ foodelha@gmail.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Food Elha. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
